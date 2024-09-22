@@ -8,7 +8,6 @@ export default async function copyImageToClipboard(imageUrl: string): Promise<vo
       });
   
       await navigator.clipboard.write([clipboardItem]);
-      console.log('Image copied successfully');
     } catch (err) {
       console.error('Failed to copy image: ', err);
     }

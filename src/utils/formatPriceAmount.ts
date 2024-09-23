@@ -4,7 +4,7 @@
  * @param currency - The optional currency code (e.g., "NGN", "USD").
  * @returns A formatted price string with the appropriate currency symbol.
  */
-export const formatPrice = (amount: number | string, currency: string = ''): string => {
+const formatPrice = (amount: number | string, currency: string = ''): string => {
     if (amount === undefined || amount === null || isNaN(Number(amount))) {
         return "Invalid amount";
     }
@@ -37,3 +37,5 @@ export const formatPrice = (amount: number | string, currency: string = ''): str
 
     return `${currencySymbol}${formattedIntegerPart}.${decimalPart}`;
 };
+
+export default formatPrice

@@ -3,7 +3,7 @@
  * @param timestamp - The timestamp to compare against the current time.
  * @returns A human-readable string indicating the time elapsed.
  */
-export const getTimeAgo = (timestamp: string): string => {
+const getTimeAgo = (timestamp: string): string => {
     const currentDate = new Date();
     const date = new Date(timestamp);
 
@@ -23,3 +23,5 @@ export const getTimeAgo = (timestamp: string): string => {
         return `${seconds} ${seconds === 1 ? "second" : "seconds"} ago`;
     }
 };
+
+export default getTimeAgo

@@ -3,7 +3,9 @@
  * @param dateString - A valid date string.
  * @returns The ISO 8601 string representation of the date.
  */
-export const convertToISOString = (dateString: string): string => {
+const convertToISOString = (dateString: string): string => {
     const date = new Date(dateString);
     return date.toISOString();
 };
+
+export default convertToISOString

@@ -4,7 +4,7 @@
  * @param countryCode - The country code (e.g., "234" for Nigeria, "1" for the USA).
  * @returns A formatted phone number with the specified country code or undefined if invalid.
  */
-export const formatPhoneNumber = (phoneNumber: string | undefined, countryCode: string): string | undefined => {
+const formatPhoneNumber = (phoneNumber: string | undefined, countryCode: string): string | undefined => {
     if (!phoneNumber || phoneNumber.trim() === "") return undefined;
 
     // Remove non-digit characters
@@ -28,3 +28,5 @@ export const formatPhoneNumber = (phoneNumber: string | undefined, countryCode: 
     // Format and return the number with the specified international country code
     return `+${countryCode}${phoneNumber}`;
 };
+
+export default formatPhoneNumber

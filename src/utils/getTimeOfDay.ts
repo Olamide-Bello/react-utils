@@ -3,7 +3,7 @@
  * @param isoString - The ISO 8601 string representation of the date.
  * @returns A string representing the time of day ('morning', 'afternoon', or 'night').
  */
-export const getTimeOfDay = (isoString: string): string => {
+const getTimeOfDay = (isoString: string): string => {
     const date = new Date(isoString);
     const hours = date.getUTCHours();
 
@@ -15,3 +15,5 @@ export const getTimeOfDay = (isoString: string): string => {
         return 'night';
     }
 };
+
+export default getTimeOfDay

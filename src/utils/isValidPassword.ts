@@ -3,7 +3,7 @@
  * @param password - The password to validate.
  * @returns `true` if the password is valid, otherwise `false`.
  */
-export const isValidPassword = (password: string): boolean => {
+const isValidPassword = (password: string): boolean => {
     const minLength = 8;
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
@@ -12,3 +12,5 @@ export const isValidPassword = (password: string): boolean => {
 
     return password.length >= minLength && hasUppercase && hasLowercase && hasDigit && hasSpecialChar;
 };
+
+export default isValidPassword

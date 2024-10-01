@@ -3,9 +3,9 @@
  * @param isoString - The ISO 8601 string representation of the date.
  * @returns A string representing the time of day ('morning', 'afternoon', or 'night').
  */
-const getTimeOfDay = (isoString: string): string => {
+const getTimeOfDay = (isoString: string, useLocalTime = true): string => {
     const date = new Date(isoString);
-    const hours = date.getUTCHours();
+    const hours = useLocalTime ? date.getHours() : date.getUTCHours();
 
     if (hours >= 5 && hours < 12) {
         return 'morning';
